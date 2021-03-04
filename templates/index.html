@@ -1,18 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>{% block content %}{{ title }}{% endblock %}</title>
 </head>
 <body>
-<h1>миссия колонизация марса</h1>
-<h2 style="opacity: .3">и на марсе будут яблони цвести</h2>
-    {% set profession = ['врач', 'климатолог', 'спортсмен'] %}
-    {% if prof == 'инженер' or prof == 'строитель'%}
-    <img src="/static/img/it2.jpg" alt="опять Илон Маск картинку не добавил">
-    {% elif prof in profession %}
-    <p>Для вас нет картинок</p>
-    {% else %}
-    <p>вы не летите</p>
-    {% endif %}
-</body>
-</html>
+<h1>Миссия Колонизация Марса</h1>
+<h4>И на Марсе будут яблони цвести!</h4>
