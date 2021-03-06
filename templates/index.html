@@ -1,8 +1,5 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block content %}{{ title }}{% endblock %}</title>
-</head>
-<body>
-<h1>Миссия Колонизация Марса</h1>
-<h4>И на Марсе будут яблони цвести!</h4>
+{% extends "base.html" %}
+
+{% block content %}
+    <title>{{title}}</title>
+{% endblock %}
