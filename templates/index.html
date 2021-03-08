@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set profession = ['врач', 'климатолог', 'спортсмен'] %}
-{% if prof == 'инженер' or prof == 'строитель'%}
-<img src="/static/img/it2.jpg" alt="опять Илон Маск картинку не добавил">
-{% elif prof in profession %}
-<p>Для вас нет картинок</p>
-{% else %}
-<p>вы не летите</p>
-{% endif %}
+{% set profes = ['врач', 'инженер', 'космоиследователь', 'пилот', 'уборщица', 'плантатор', 'хирург'] %}
+{% for i in profes %}
+    <{{list}}>
+    <li>{{i}}</li>
+    </{{list}}>
+{% endfor %}
 {% endblock %}
