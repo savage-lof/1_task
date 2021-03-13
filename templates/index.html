@@ -1,24 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<img src="/static/img/mask.jpg" alt="опять Илон Маск картинку не добавил">
-<h1>Аварийный доступ</h1>
-<form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">id астронавта</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Пароль астронавта</label>
-      <input type="password" class="form-control">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">id капитана</label>
-      <input type="text" class="form-control">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Пароль капитана</label>
-      <input type="password" class="form-control">
-    </div>
-</form>
+<h1>Размещение по каютам</h1>
+{% set quote = 'Каюта №' %}
+    {% for user in people %}
+        <p>{{ user }} - {{ quote }}{{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}</p>
+{% endfor %}
 {% endblock %}
