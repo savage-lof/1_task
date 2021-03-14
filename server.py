@@ -24,5 +24,9 @@ def distribution():
               'Венката Капур', 'Тедди Сандерс', 'Шон Бин']
     return render_template('index.html', peolpe=human)
 
+@app.route('/table/<sex>/<year>')
+def table(sex, year):
+    return render_template('index.html', sex=sex, year=year)
+
 if __name__ == '__main__':
     app.run(port=5000, host='127.0.0.1')
