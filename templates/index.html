@@ -1,36 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Оформление каюты</h1>
-{% if (year|int() > 23) %}
-{% set pict = 'background:"static/img/old.jpg"' %}
-{% if sex == 'female' %}
-{% set color = 'background:"#ff4500"' %}
-{% else %}
-{% set color = 'background:"#007ff0"' %}
-{% endif %}
-{% else %}
-{% set pict = 'background:"static/img/neold.jpg"' %}
-{% if sex == 'female' %}
-{% set color = 'background:"#ffa07a"' %}
-{% else %}
-{% set color = 'background:"#b0c4de"' %}
-{% endif %}
-{% endif %}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            Цвет стен
-        </div>
-        <div class="col">
-            Эмблема
-        </div>
-    </div>
-    <div class="row">
-        <div class="col" style= {{ color }}>
-        </div>
-        <div class="col" style= {{ pict }}>
-        </div>
-    </div>
-</div>
+<h1>Размещение по каютам</h1>
+{% set quote = 'Каюта №' %}
+    {% for user in people %}
+        <p>{{ user }} - {{ quote }}{{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}</p>
+{% endfor %}
 {% endblock %}

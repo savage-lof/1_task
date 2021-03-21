@@ -22,7 +22,7 @@ def login():
 def distribution():
     human = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни',
               'Венката Капур', 'Тедди Сандерс', 'Шон Бин']
-    return render_template('index.html', peolpe=human)
+    return render_template('index.html', people=human)
 
 @app.route('/table/<sex>/<year>')
 def table(sex, year):
